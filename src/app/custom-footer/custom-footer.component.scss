@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  background-image: url("../../assets/img/backgroundImage01.jpg");
+  background-size: cover;
+
+  .lockup {
+    margin: 30px;
+
+    .logo {
+      background-color: blue;
+    }
+    .content-wrap {
+      background-color: red;
+    }
+  }
+}
