@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-footer',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-footer.component.scss']
 })
 export class CustomFooterComponent implements OnInit {
+
+  @Input() footerSubpageNames: string[];
 
   constructor() { }
 

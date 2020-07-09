@@ -5,10 +5,7 @@
   </div>
 
   <nav>
-    <a href="#">About Me</a>
-    <a href="#">Work</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="#" *ngFor="let page of headerSubpageNames" (click)="usePageName(page)">{{page}}</a>
   </nav>
 
   </div>
