@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-custom-header',
@@ -8,11 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CustomHeaderComponent implements OnInit {
 
   @Input('passedPageNames') headerSubpageNames: string[];
+  @Output() outputVariable: EventEmitter<string>;
 
-  constructor() { }
+  constructor() { 
+    this.outputVariable = new EventEmitter();
+  }
 
-  usePageName(e) {
-    console.log(e);
+  usePageName(page: string) {
+    this.outputVariable.emit(page);
   }
 
   ngOnInit(): void {
